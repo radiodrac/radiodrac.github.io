@@ -124,6 +124,8 @@ section:not(#welcome-section, #contact) {
 .intro-tile {
   background: var(--light-shade);
   color: var(--dark-shade);
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 #about h2 {
@@ -202,4 +204,9 @@ a[id=profile-link]:hover {
   #navbar li {
   margin-left: 0;
   }
+}
+
+@media screen and (min-width: 640px) {
+  #about p {
+    font-size: 1em;
 }
