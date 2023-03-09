@@ -58,6 +58,10 @@ a {
   background: var(--dark-accent);
 }
 
+#navbar a:active {
+  color: var(--dark-shade);
+}
+
 #navbar #nav-home {
   position: fixed;
   right: 14px;
@@ -114,6 +118,10 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+section {
+  min-height: 100vh;
 }
 
 section:not(#welcome-section, #contact) {
@@ -183,12 +191,42 @@ section:not(#welcome-section, #contact) {
   color: var(--light-accent);
 }
 
-a[id=profile-link] {
+a#profile-link {
   color: var(--light-shade);
 }
 
-a[id=profile-link]:hover {
+a#profile-link:hover {
   background: var(--dark-accent);
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  max-width: 100%;
+}
+
+.contact-link {
+  color: var(--light-shade);
+  background: var(--main-color);
+  width: 10em;
+  border-radius: 5px;
+  padding: 0.6em;
+  margin: 8px;
+}
+
+.contact-link:hover {
+  background: var(--dark-accent);
+}
+
+.contact-link:active {
+  color: var(--dark-shade);
+}
+
+.contact-icon {
+  font-size: 1.4em;
+  vertical-align: middle;
+  margin-right: 0.2em;
 }
 
 @media screen and (min-width: 390px) {
@@ -204,9 +242,14 @@ a[id=profile-link]:hover {
   #navbar li {
   margin-left: 0;
   }
+  section:not(#welcome-section, #contact) {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
 }
 
 @media screen and (min-width: 640px) {
   #about p {
     font-size: 1em;
+  }
 }
