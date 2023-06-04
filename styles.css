@@ -1,14 +1,16 @@
-*, ::before, ::after {
+*,
+::before,
+::after {
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --light-shade: #F4F1F4;
-  --light-accent: #A999A4;
-  --main-color: #497A82;
-  --dark-accent: #BD6F8A;
-  --dark-shade: #2C1B2B;
+  --light-shade: #f4f1f4;
+  --light-accent: #a999a4;
+  --main-color: #497a82;
+  --dark-accent: #bd6f8a;
+  --dark-shade: #2c1b2b;
 }
 
 body {
@@ -52,10 +54,12 @@ a {
   padding: 0.6em 1em;
   text-transform: uppercase;
   font-size: 1.2em;
+  transition: all 200ms;
 }
 
 #navbar a:hover {
   background: var(--dark-accent);
+  transform: translateY(-5px);
 }
 
 #navbar a:active {
@@ -74,11 +78,16 @@ a {
   font-size: 26px;
 }
 
+#navbar #nav-home:hover {
+  transform: translateY(-5px);
+}
+
 section {
   padding: 30px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: "Trebuchet MS", Arial, sans-serif;
 }
 
@@ -112,7 +121,8 @@ p {
   box-shadow: 1px 2px 5px var(--dark-shade);
 }
 
-#welcome-section, #contact {
+#welcome-section,
+#contact {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -152,7 +162,8 @@ section:not(#welcome-section, #contact) {
   background-size: 12px 12px;
 }
 
-#projects, .project-tile a {
+#projects,
+.project-tile a {
   color: var(--dark-shade);
 }
 
@@ -169,6 +180,11 @@ section:not(#welcome-section, #contact) {
   background-color: var(--light-shade);
   max-width: 340px;
   margin-top: 36px;
+  transition: transform 200ms;
+}
+
+.project-tile:hover {
+  transform: scale(1.05);
 }
 
 .project-wrapper {
@@ -213,10 +229,13 @@ a#profile-link:hover {
   border-radius: 5px;
   padding: 0.6em;
   margin: 8px;
+  transition: all 200ms;
 }
 
 .contact-link:hover {
   background: var(--dark-accent);
+  transform: scale(1.05);
+  box-shadow: 1px 2px 5px #000000;
 }
 
 .contact-link:active {
@@ -231,21 +250,21 @@ a#profile-link:hover {
 
 @media screen and (min-width: 390px) {
   #navbar ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
   }
   #navbar ul:last-child::after {
     content: "";
     width: 30px;
   }
   #navbar li {
-  margin-left: 0;
+    margin-left: 0;
   }
   section:not(#welcome-section, #contact) {
-  padding-top: 5em;
-  padding-bottom: 5em;
-}
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
 }
 
 @media screen and (min-width: 640px) {
