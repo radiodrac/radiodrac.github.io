@@ -13,6 +13,10 @@
   --dark-shade: #2c1b2b;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--light-shade);
   background: var(--dark-shade);
